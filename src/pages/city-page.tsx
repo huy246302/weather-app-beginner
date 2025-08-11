@@ -1,9 +1,7 @@
-import React from 'react'
-
-const city-page = () => {
+const CityPage = () => {
   return (
     <div>city-page</div>
   )
 }
 
-export default city-page
+export default CityPage

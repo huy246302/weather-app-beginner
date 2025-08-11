@@ -1,9 +1,7 @@
-import React from 'react'
-
-const weather-dashboard = () => {
+const WeatherDashboard = () => {
   return (
-    <div>weather-dashboard</div>
+    <div>WeatherDashboard</div>
   )
 }
 
-export default weather-dashboard
+export default WeatherDashboard
