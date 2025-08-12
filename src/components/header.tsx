@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <Link to={"/"}>
           <img 
-          src={isDark === "dark" ? "/logo.png" : "/logo2.png"}
+          src={isDark ? "/logo.png" : "/logo2.png"}
           alt="Weather logo"
           className="h-14"
           />
