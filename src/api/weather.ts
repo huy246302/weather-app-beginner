@@ -24,11 +24,11 @@ class WeatherAPI {
         return response.json();
     }
 
-    async getCurrntWeather({lat,lon}: Coordinates) {
+    async getCurrentWeather({lat,lon}: Coordinates) {
         const url = this.createUrl(`${API_CONFIG.BASE_URL}/weather`,{
             lat: lat.toString(),
             lon: lon.toString(),
-            unit: API_CONFIG.DEFAULT_PARAMS.units,
+            units: API_CONFIG.DEFAULT_PARAMS.units,
         });
 
         return this.fetchData<WeatherData>(url);
@@ -45,14 +45,16 @@ class WeatherAPI {
     }
 
 
-    async reverseGeocode({lat,lon}: Coordinates): Promise<GeocodingResponse> {
+    async reverseGeocode({
+        lat,lon
+    }: Coordinates): Promise<GeocodingResponse[]> {
         const url = this.createUrl(`${API_CONFIG.GEO}/reverse`,{
             lat: lat.toString(),
             lon: lon.toString(),
             limit: 1,
         });
 
-        return this.fetchData<GeocodingResponse>(url);
+        return this.fetchData<GeocodingResponse[]>(url);
     }
 }
 
