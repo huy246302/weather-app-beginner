@@ -76,7 +76,7 @@ const WeatherDashboard = () => {
             <AlertTitle>Error</AlertTitle>
             <AlertDescription className="flex flex-col gap-4">
               <p>Failed to fetch weather data. Please try again</p>
-              <Button onClick={getLocation} variant={"outline"} className="w-fit">
+              <Button onClick={handleRefresh} variant={"outline"} className="w-fit">
                 <RefreshCw className="mr-2 h-4 w-4"/>
                 Retry
               </Button>
