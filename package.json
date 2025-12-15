@@ -1,6 +1,6 @@
 {
   "name": "weather-app",
-  "private": true,
+  "homepage": "https://huy246302.github.io/weather-app-beginner/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
